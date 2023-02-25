@@ -13,6 +13,7 @@ export function Databoardtableco() {
   const [data, setData] = useState('');
   const [lo, setLo] = useState();
   const [loading, setLoading] = useState(true);
+
   const { token, setToken, isuserloggedin, setIsuserloggedin } = useAuth();
   const postData = async () => {
     const config = {
@@ -214,8 +215,8 @@ export function Databoardtableco() {
                           <option selected='' disabled='' value=''>
                             Choose...
                           </option>
-                          <option>Business</option>
-                          <option>Employee</option>
+                          <option value='Business'>Business</option>
+                          <option value='Employee'>Employee</option>
                         </select>
                       </td>
 
