@@ -88,7 +88,8 @@
   margin-right: 5rem;
 }
 .summaryparam {
-  width: 280px;
+  min-width: 170px;
+  max-width: 360px;
   font-family: 'Inter', sans-serif;
 }
 .summaryparam .summaryparam__value {
@@ -130,12 +131,7 @@
 .dashparameter {
   font-family: 'Inter', sans-serif;
 }
-.sp-param {
-  width: 295px;
-}
-.sm-param {
-  width: 235px;
-}
+
 text {
   font-weight: 700;
 }

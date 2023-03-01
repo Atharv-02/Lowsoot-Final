@@ -22,7 +22,7 @@ export function Databoardtableb() {
       };
 
       await axios.post(
-        'https://emissions-calculator-mc2k.onrender.com/buildingEmission',
+        'http://15.207.87.23:3000/buildingEmission',
         {
           buildingSpace: buildingSpace,
           date: dates,

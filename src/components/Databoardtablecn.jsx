@@ -28,7 +28,7 @@ export function Databoardtablecn() {
     console.log('h');
     try {
       await axios.post(
-        'https://emissions-calculator-mc2k.onrender.com/task',
+        'http://15.207.87.23:3000/task',
         {
           emissionType: emType,
           emissionTillDate: tillDate,
@@ -73,10 +73,7 @@ export function Databoardtablecn() {
         };
         const {
           data: { taskNames: response },
-        } = await axios.get(
-          'https://emissions-calculator-mc2k.onrender.com/taskNames',
-          config
-        );
+        } = await axios.get('http://15.207.87.23:3000/taskNames', config);
         console.log(response);
         setData(response);
         console.log(response);
@@ -98,7 +95,7 @@ export function Databoardtablecn() {
         // };
 
         const { data: resp } = await axios.get(
-          'https://emissions-calculator-mc2k.onrender.com/task',
+          'http://15.207.87.23:3000/task',
 
           config
         );
@@ -137,7 +134,7 @@ export function Databoardtablecn() {
         const {
           data: { total: resp },
         } = await axios.post(
-          'https://emissions-calculator-mc2k.onrender.com/getTotal',
+          'http://15.207.87.23:3000/getTotal',
           { emissionType: emType || '' },
           config
         );

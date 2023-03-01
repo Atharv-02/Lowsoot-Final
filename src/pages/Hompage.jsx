@@ -91,7 +91,7 @@ export function Hompage() {
         console.log(dateval);
         console.log(enddateval);
         const { data } = await axios.post(
-          'https://emissions-calculator-mc2k.onrender.com/summary',
+          'http://15.207.87.23:3000/summary',
           {
             startDate: dateval,
             endDate: enddateval,

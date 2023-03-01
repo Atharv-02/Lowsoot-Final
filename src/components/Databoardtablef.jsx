@@ -30,7 +30,7 @@ export function Databoardtablef() {
       console.log(a);
 
       await axios.post(
-        'https://emissions-calculator-mc2k.onrender.com/electricityEmission',
+        'http://15.207.87.23:3000/electricityEmission',
         {
           date: dates,
           factorType: a.id,
@@ -58,9 +58,7 @@ export function Databoardtablef() {
       try {
         const {
           data: { All: response },
-        } = await axios.get(
-          'https://emissions-calculator-mc2k.onrender.com/allFuelFactors'
-        );
+        } = await axios.get('http://15.207.87.23:3000/allFuelFactors');
         console.log(response);
 
         setData(response);
@@ -82,7 +80,7 @@ export function Databoardtablef() {
         // };
 
         const { data: resp } = await axios.get(
-          'https://emissions-calculator-mc2k.onrender.com/fuelEmissions',
+          'http://15.207.87.23:3000/fuelEmissions',
 
           config
         );

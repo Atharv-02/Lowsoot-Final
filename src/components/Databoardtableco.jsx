@@ -35,7 +35,7 @@ export function Databoardtableco() {
         setLoading(false);
 
         await axios.post(
-          'https://emissions-calculator-mc2k.onrender.com/travelEmission',
+          'hhttp://15.207.87.23:3000/travelEmission',
           {
             distance: distance,
             travelBy: 'Road',
@@ -69,9 +69,7 @@ export function Databoardtableco() {
       try {
         const {
           data: { Road: response },
-        } = await axios.get(
-          'https://emissions-calculator-mc2k.onrender.com/allTravelFactors'
-        );
+        } = await axios.get('http://15.207.87.23:3000/allTravelFactors');
 
         setData(response);
       } catch (err) {
@@ -93,7 +91,7 @@ export function Databoardtableco() {
         // };
 
         const { data: resp } = await axios.get(
-          'https://emissions-calculator-mc2k.onrender.com/travelEmissions',
+          'http://15.207.87.23:3000/travelEmissions',
 
           config
         );

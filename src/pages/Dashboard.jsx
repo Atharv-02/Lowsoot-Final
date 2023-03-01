@@ -52,7 +52,7 @@ export function Dashboard() {
         console.log(dateval);
         console.log(enddateval);
         const { data } = await axios.post(
-          'https://emissions-calculator-mc2k.onrender.com/summary',
+          'http://15.207.87.23:3000/summary',
           {
             startDate: dateval,
             endDate: enddateval,
@@ -111,58 +111,87 @@ export function Dashboard() {
                   >
                     <div className='summaryparam'>
                       <p className='product_tab_title'>Maternity bra</p>
-                      <p className='product_tab_value'>20000 units</p>
                       <p className='product_tab_value'>
-                        50000 Co<sub>2</sub>e
+                        {data['Product']['Maternity Bra'].sales} units
+                      </p>
+                      <p className='product_tab_value'>
+                        {data['Product']['Maternity Bra'].emissions} Co
+                        <sub>2</sub>e
                       </p>
                     </div>
                     <div className='summaryparam'>
                       <p className='product_tab_title'>Regular bra</p>
-                      <p className='product_tab_value'>20000 units</p>
                       <p className='product_tab_value'>
-                        50000 Co<sub>2</sub>e
+                        {data['Product']['Regular Bra'].sales} units
+                      </p>
+                      <p className='product_tab_value'>
+                        {data['Product']['Regular Bra'].emissions} Co
+                        <sub>2</sub>e
                       </p>
                     </div>
                     <div className='summaryparam sm-param'>
                       <p className='product_tab_title'>Panty</p>
-                      <p className='product_tab_value'>20000 units</p>
                       <p className='product_tab_value'>
-                        50000 Co<sub>2</sub>e
+                        {' '}
+                        {data['Product']['Panty'].sales} units
+                      </p>
+                      <p className='product_tab_value'>
+                        {data['Product']['Panty'].emissions} Co
+                        <sub>2</sub>e
                       </p>
                     </div>
                     <div className='summaryparam sp-param'>
                       <p className='product_tab_title'>Loungee Long tee kind</p>
-                      <p className='product_tab_value'>20000 units</p>
                       <p className='product_tab_value'>
-                        50000 Co<sub>2</sub>e
+                        {data['Product']['Lounge Long Tee Kind'].sales} units
+                      </p>
+                      <p className='product_tab_value'>
+                        {data['Product']['Lounge Long Tee Kind'].emissions} Co
+                        <sub>2</sub>e
                       </p>
                     </div>
                     <div className='summaryparam'>
                       <p className='product_tab_title'>Loungee dress kind</p>
-                      <p className='product_tab_value'>20000 units</p>
                       <p className='product_tab_value'>
-                        50000 Co<sub>2</sub>e
+                        {' '}
+                        {data['Product']['Lounge Dress Kind'].sales} units
+                      </p>
+                      <p className='product_tab_value'>
+                        {data['Product']['Lounge Dress Kind'].emissions} Co
+                        <sub>2</sub>e
                       </p>
                     </div>
-                    <div className='summaryparam'>
-                      <p className='product_tab_title'>Maternity bra</p>
-                      <p className='product_tab_value'>20000 units</p>
-                      <p className='product_tab_value'>
-                        50000 Co<sub>2</sub>e
-                      </p>
-                    </div>
+
                     <div className='summaryparam sm-param'>
                       <p className='product_tab_title'>Nighty</p>
-                      <p className='product_tab_value'>20000 units</p>
                       <p className='product_tab_value'>
-                        50000 Co<sub>2</sub>e
+                        {data['Product']['Nighty'].sales} units
+                      </p>
+                      <p className='product_tab_value'>
+                        {data['Product']['Nighty'].emissions} Co<sub>2</sub>e
                       </p>
                     </div>
                     <div className='summaryparam'>
                       <p className='product_tab_title'>Lounge Bottom</p>
-                      <p className='product_tab_value'>20000 units</p>
                       <p className='product_tab_value'>
-                        50000 Co<sub>2</sub>e
+                        {data['Product']['Lounge Bottom'].sales} units
+                      </p>
+                      <p className='product_tab_value'>
+                        {data['Product']['Lounge Bottom'].emissions} Co
+                        <sub>2</sub>e
+                      </p>
+                    </div>
+                    <div className='summaryparam'>
+                      <p className='product_tab_title'>
+                        Carbon Saved On <br />
+                        Maternity bra
+                      </p>
+                      <p className='product_tab_value'>
+                        {' '}
+                        {data['Product']['Maternity Bra'].sales} units
+                      </p>
+                      <p className='product_tab_value'>
+                        {data['Product']['Maternity Bra'].saved} Co<sub>2</sub>e
                       </p>
                     </div>
                   </div>
@@ -173,21 +202,13 @@ export function Dashboard() {
                     <div className='summaryparam'>
                       <p className='product_tab_title'>
                         Carbon Saved On <br />
-                        Maternity bra
-                      </p>
-                      <p className='product_tab_value'>20000 units</p>
-                      <p className='product_tab_value'>
-                        50000 Co<sub>2</sub>e
-                      </p>
-                    </div>
-                    <div className='summaryparam'>
-                      <p className='product_tab_title'>
-                        Carbon Saved On <br />
                         Regular bra
                       </p>
-                      <p className='product_tab_value'>20000 units</p>
                       <p className='product_tab_value'>
-                        50000 Co<sub>2</sub>e
+                        {data['Product']['Regular Bra'].sales} units
+                      </p>
+                      <p className='product_tab_value'>
+                        {data['Product']['Regular Bra'].saved} Co<sub>2</sub>e
                       </p>
                     </div>
                     <div className='summaryparam '>
@@ -195,9 +216,11 @@ export function Dashboard() {
                         Carbon Saved On <br />
                         Panty
                       </p>
-                      <p className='product_tab_value'>20000 units</p>
                       <p className='product_tab_value'>
-                        50000 Co<sub>2</sub>e
+                        {data['Product']['Panty'].sales} units
+                      </p>
+                      <p className='product_tab_value'>
+                        {data['Product']['Panty'].saved} Co<sub>2</sub>e
                       </p>
                     </div>
                   </div>

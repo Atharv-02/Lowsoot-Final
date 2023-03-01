@@ -39,13 +39,10 @@ export function Signin() {
   const check = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(
-        'https://emissions-calculator-mc2k.onrender.com/login',
-        {
-          email: email,
-          password: pass,
-        }
-      );
+      const { data } = await axios.post('http://15.207.87.23:3000/login', {
+        email: email,
+        password: pass,
+      });
       const token = data.token;
       const companyId = data.companyId;
       // console.log(token);

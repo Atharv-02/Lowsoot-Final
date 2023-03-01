@@ -26,7 +26,7 @@ export function Databoardtablep() {
     });
 
     await axios.post(
-      'https://emissions-calculator-mc2k.onrender.com/productEmission',
+      'http://15.207.87.23:3000/productEmission',
       {
         numberOfItems: items,
         type: product,
@@ -53,7 +53,7 @@ export function Databoardtablep() {
         // };
 
         const { data: resp } = await axios.get(
-          'https://emissions-calculator-mc2k.onrender.com/productEmissions',
+          'http://15.207.87.23:3000/productEmissions',
 
           config
         );

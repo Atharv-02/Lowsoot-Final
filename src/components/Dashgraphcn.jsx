@@ -26,7 +26,7 @@ export function Dashgraphcn() {
     try {
       setLoading(true);
       const c = await axios.post(
-        'https://emissions-calculator-mc2k.onrender.com/taskData',
+        'http://15.207.87.23:3000/taskData',
         { emissionType: 'Fuel' },
         config
       );

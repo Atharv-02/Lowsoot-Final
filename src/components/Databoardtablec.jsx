@@ -38,7 +38,7 @@ export function Databoardtablec() {
       setLoading(false);
       try {
         await axios.post(
-          'https://emissions-calculator-mc2k.onrender.com/cargoEmission',
+          'http://15.207.87.23:3000/cargoEmission',
           {
             weight: wt,
             distance: distance,
@@ -74,9 +74,7 @@ export function Databoardtablec() {
       try {
         const {
           data: { Road: response },
-        } = await axios.get(
-          'https://emissions-calculator-mc2k.onrender.com/allCargoFactors'
-        );
+        } = await axios.get('http://15.207.87.23:3000/allCargoFactors');
         console.log(response);
         setData(response);
         console.log(response);
@@ -99,7 +97,7 @@ export function Databoardtablec() {
         // };
 
         const { data: resp } = await axios.get(
-          'https://emissions-calculator-mc2k.onrender.com/cargoEmissions',
+          'http://15.207.87.23:3000/cargoEmissions',
 
           config
         );

@@ -29,7 +29,7 @@ export function Dashgrapf() {
         // };
 
         const { data } = await axios.get(
-          'https://emissions-calculator-mc2k.onrender.com/visualisation',
+          'http://15.207.87.23:3000/visualisation',
           config
         );
         console.log(data);
